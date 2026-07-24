@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunovia - Modern E-Commerce</title>
+    <!-- Linking external CSS & Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="Lunovia Home">
+                <i class="fas fa-shopping-bag logo-icon"></i>
+                <h1>Lunovia</h1>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation">
+                <span></span>
+            </label>
+
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#featured">Shop</a></li>
+                    <li><a href="#offers">Deals</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <form role="search" class="search-container desktop-search">
+                <label for="search-input" class="sr-only" style="display: none;">Search products</label>
+                <i class="fas fa-search search-icon-left" aria-hidden="true"></i>
+                <input type="text" id="search-input" placeholder="Search products..." class="search-input"
+                    aria-label="Search">
+            </form>
+
+            <div class="header-actions">
+                <a href="#account" class="user-account icon-link" aria-label="User Account">
+                    <i class="fas fa-user-circle" aria-hidden="true"></i>
+                </a>
+
+                <a href="#wishlist" class="wishlist icon-link" aria-label="Wishlist">
+                    <i class="far fa-heart" aria-hidden="true"></i>
+                    <span class="wishlist-badge">0</span>
+                </a>
+
+                <a href="#cart" class="cart icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-banner container">
+            <div class="hero-content fade-in-left">
+                <span class="hero-subtitle">NEW COLLECTION 2026</span>
+                <h2>Discover the Best Products Online</h2>
+                <p>Shop the latest trends in electronics, fashion, and accessories. Premium quality, best prices.</p>
+                <a href="#featured" class="btn btn-primary hero-btn">Shop Now <i class="fas fa-arrow-right"
+                        aria-hidden="true" style="margin-left:8px;"></i></a>
+            </div>
+            <div class="hero-image-wrapper fade-in-right">
+                <span class="product-badge badge-sale hero-discount-badge">30% OFF</span>
+                <img src="hero-shoe.jpg" alt="Latest premium products collection" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Trust Features Section -->
+        <section class="trust-features container">
+            <div class="trust-features-grid">
+                <div class="trust-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div class="trust-text">
+                        <h4>Free Shipping</h4>
+                        <p>On orders over 399</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-shield-halved"></i>
+                    <div class="trust-text">
+                        <h4>Secure Payment</h4>
+                        <p>100% secure checkout</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-rotate-left"></i>
+                    <div class="trust-text">
+                        <h4>Easy Returns</h4>
+                        <p>30-day return policy</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-headset"></i>
+                    <div class="trust-text">
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated assistance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-list">
+                <article class="category-item">
+                    <a href="#electronics">
+                        <img src="electronics.jpg" alt="Electronics Category" loading="lazy">
+                        <h3>Electronics</h3>
+                    </a>
+                </article>
+                <article class="category-item">
+                    <a href="#shoes">
+                        <img src="shoes.jpg" alt="Shoes Category" loading="lazy">
+                        <h3>Shoes</h3>
+                    </a>
+                </article>
+                <article class="category-item">
+                    <a href="#watches">
+                        <img src="watch.jpg" alt="Watches Category" loading="lazy">
+                        <h3>Watches</h3>
+                    </a>
+                </article>
+                <article class="category-item">
+                    <a href="#home-decor">
+                        <img src="decor.jpg" alt="Home Decor Category" loading="lazy">
+                        <h3>Home Decor</h3>
+                    </a>
+                </article>
+                <article class="category-item">
+                    <a href="#accessories">
+                        <img src="accessories.jpg" alt="Accessories Category" loading="lazy">
+                        <h3>Accessories</h3>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="featured" class="featured-products">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <div class="sort-container">
+                    <label for="sort-products">Sort By:</label>
+                    <select id="sort-products" class="sort-select">
+                        <option value="newest">Newest</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card" data-category="electronics">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge badge-new">New</span>
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Wireless Headphones">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="headphones.jpg" alt="Wireless Headphones" loading="lazy">
+                    </div>
+                    <h3>Wireless Headphones</h3>
+                    <p class="product-desc">Premium wireless headphones with immersive sound quality.</p>
+                    <div class="rating" aria-label="5 out of 5 stars, 120 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(120)</span>
+                    </div>
+                    <p class="price">1599</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card" data-category="electronics">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge badge-new">New</span>
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Smart Watch">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="smartwatch.jpg" alt="Smart Watch" loading="lazy">
+                    </div>
+                    <h3>Smart Watch</h3>
+                    <p class="product-desc">Track fitness, notifications, and daily activities.</p>
+                    <div class="rating" aria-label="4 out of 5 stars, 85 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(85)</span>
+                    </div>
+                    <p class="price">2299</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card" data-category="fashion footwear">
+                    <div class="product-image-wrapper">
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Running Shoes">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="running-shoes.jpg" alt="Running Shoes" loading="lazy">
+                    </div>
+                    <h3>Running Shoes</h3>
+                    <p class="product-desc">Lightweight running shoes for comfort and performance.</p>
+                    <div class="rating" aria-label="5 out of 5 stars, 340 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(340)</span>
+                    </div>
+                    <p class="price">889</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card" data-category="accessories bags">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge badge-discount">10% OFF</span>
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Backpack">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="backpack.jpg" alt="Backpack" loading="lazy">
+                    </div>
+                    <h3>Backpack</h3>
+                    <p class="product-desc">Durable backpack for travel, work, and college.</p>
+                    <div class="rating" aria-label="4 out of 5 stars, 45 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(45)</span>
+                    </div>
+                    <p class="price">999</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 5 -->
+                <article class="product-card" data-category="electronics accessories">
+                    <div class="product-image-wrapper">
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Gaming Mouse">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="mouse.jpg" alt="Gaming Mouse" loading="lazy">
+                    </div>
+                    <h3>Gaming Mouse</h3>
+                    <p class="product-desc">High-precision RGB gaming mouse for smooth gameplay.</p>
+                    <div class="rating" aria-label="5 out of 5 stars, 210 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(210)</span>
+                    </div>
+                    <p class="price">449</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 6 -->
+                <article class="product-card" data-category="electronics accessories">
+                    <div class="product-image-wrapper">
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Mechanical Keyboard">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="keyboard.jpg" alt="Mechanical Keyboard" loading="lazy">
+                    </div>
+                    <h3>Mechanical Keyboard</h3>
+                    <p class="product-desc">Responsive mechanical keyboard with tactile keys.</p>
+                    <div class="rating" aria-label="5 out of 5 stars, 175 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(175)</span>
+                    </div>
+                    <p class="price">629</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 7 -->
+                <article class="product-card" data-category="accessories fashion">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge badge-discount">10% OFF</span>
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Leather Wallet">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="wallet.jpg" alt="Leather Wallet" loading="lazy">
+                    </div>
+                    <h3>Leather Wallet</h3>
+                    <p class="product-desc">Premium leather wallet with multiple card slots.</p>
+                    <div class="rating" aria-label="4 out of 5 stars, 90 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(90)</span>
+                    </div>
+                    <p class="price">749</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+
+                <!-- Product 8 -->
+                <article class="product-card" data-category="accessories fashion">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge badge-sale">Sale</span>
+                        <button class="wishlist-btn" aria-label="Toggle Wishlist" data-title="Sunglasses">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <img src="sunglasses.jpg" alt="Sunglasses" loading="lazy">
+                    </div>
+                    <h3>Sunglasses</h3>
+                    <p class="product-desc">Stylish UV-protection sunglasses for everyday use.</p>
+                    <div class="rating" aria-label="4 out of 5 stars, 65 reviews">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true">(65)</span>
+                    </div>
+                    <p class="price">1299</p>
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </article>
+            </div>
+            <div id="no-products-message"
+                style="display: none; text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-top: 2rem;">
+                No matching products found.
+            </div>
+        </section>
+
+        <!-- Special Offers Section -->
+        <section id="offers" class="offers">
+            <img src="offer-banner.jpg" alt="Mega Clearance Sale Promo" class="offer-image" loading="lazy">
+            <div class="offer-content">
+                <h2>Mega Clearance Sale</h2>
+                <h3>Get up to 30% Off!</h3>
+                <p>Upgrade your collection with our exclusive deals. Limited time offer, hurry up and grab your
+                    favorites now.</p>
+                <a href="#featured" class="btn btn-promo">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About ShopHub</h2>
+            <p class="about-text">ShopHub is your trusted online shopping destination offering premium electronics,
+                fashion, accessories, footwear, and lifestyle products. We focus on quality products, secure payments,
+                fast delivery, and excellent customer support to provide a seamless shopping experience.</p>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Payment</h3>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-truck-fast"></i>
+                    <h3>Fast Delivery</h3>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Quality Products</h3>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <p>Get the latest updates on new products and upcoming sales directly in your inbox.</p>
+                </div>
+                <form class="newsletter-form" action="#" method="POST" novalidate>
+                    <input type="email" placeholder="Enter your email address" aria-label="Email Address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-links footer-columns">
+                <section class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <address>
+                        <p>Ahmedabad</p>
+                        <p>Gujarat, India</p>
+                        <p>Email: <a href="mailto:support@Lunovia.com">support@Lunovia.com</a></p>
+                        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    </address>
+                </section>
+
+                <section class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer Quick Links">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#shop">Shop</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#deals">Deals</a></li>
+                            <li><a href="#about">About Us</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section class="footer-support">
+                    <h4>Customer Support</h4>
+                    <nav aria-label="Footer Customer Support">
+                        <ul>
+                            <li><a href="#">Help Center & FAQs</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Returns & Refunds</a></li>
+                            <li><a href="#">Shipping Information</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Subscribe to our YouTube channel"><i class="fab fa-youtube"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="footer-trust">
+                <div class="trust-item">
+                    <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                    <span>Secure Payments</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-truck-fast" aria-hidden="true"></i>
+                    <span>Fast Delivery</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-rotate-left" aria-hidden="true"></i>
+                    <span>Easy Returns</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lunovia. Designed by Aadhya Panchal.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" aria-label="Visa"></i>
+                    <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" aria-label="PayPal"></i>
+                    <span class="upi-badge">UPI</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-overlay" id="quick-view-overlay"></div>
+    <div class="quick-view-modal" id="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+        <button class="close-qv-btn" id="close-qv-btn" aria-label="Close Quick View">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="qv-content">
+            <div class="qv-image-col">
+                <img id="qv-img" loading="eager" src="" alt="Product Image">
+            </div>
+            <div class="qv-details-col">
+                <h2 id="qv-title">Product Name</h2>
+                <div class="rating" id="qv-rating"></div>
+                <p class="price" id="qv-price">0</p>
+                <p class="qv-desc" id="qv-desc">Description</p>
+                <div class="qv-actions">
+                    <button type="button" class="btn btn-primary" id="qv-add-cart">Add to Cart</button>
+                    <button type="button" class="btn btn-outline" id="qv-wishlist">
+                        <i class="far fa-heart"></i> Add to Wishlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-overlay" id="wishlist-overlay"></div>
+    <div class="wishlist-sidebar" id="wishlist-sidebar">
+        <div class="wishlist-sidebar-header">
+            <h2>Your Wishlist</h2>
+            <button class="close-wishlist-btn" id="close-wishlist-btn" aria-label="Close Wishlist">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist-sidebar-content" id="wishlist-sidebar-content">
+            <div class="wishlist-empty-state" id="wishlist-empty-state">
+                <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">??</p>
+                <p>Your wishlist is empty</p>
+                <button class="btn btn-primary" onclick="document.getElementById('close-wishlist-btn').click()"
+                    style="margin-top: 1rem;">Explore Products</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart-btn" id="close-cart-btn" aria-label="Close Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-sidebar-content" id="cart-sidebar-content">
+            <div class="cart-empty-state" id="cart-empty-state">
+                <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">??</p>
+                <p>Your cart is empty</p>
+                <button class="btn btn-primary continue-shopping-btn" style="margin-top: 1.5rem;">Continue
+                    Shopping</button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+        </div>
+        <div class="cart-sidebar-footer" id="cart-sidebar-footer">
+            <div class="cart-summary-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal-price">?0</span>
+            </div>
+            <div class="cart-summary-row text-success">
+                <span>Delivery:</span>
+                <span>Free</span>
+            </div>
+            <div class="cart-total mt-2" style="padding-top: 1rem; border-top: 1px solid #e2e8f0; margin-top: 1rem;">
+                <span>Total:</span>
+                <span id="cart-total-price">?0</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" style="width: 100%; margin-bottom: 0.8rem;">Checkout</button>
+            <button class="btn btn-outline continue-shopping-btn" style="width: 100%;">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
