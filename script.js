@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             saveCart();
             updateCartUI();
-            showToast('? Product added to Cart');
+            showToast('Product added to Cart');
         });
     });
 
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cart.splice(index, 1);
                 saveCart();
                 updateCartUI();
-                showToast('?? Removed from Cart');
+                showToast('Removed from Cart');
             });
         });
         const increaseBtns = document.querySelectorAll('.qty-increase');
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     cart[index].quantity -= 1;
                 } else {
                     cart.splice(index, 1);
-                    showToast('?? Removed from Cart');
+                    showToast('Removed from Cart');
                 }
                 saveCart();
                 updateCartUI();
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (!emailRegex.test(email)) {
                     showToast('Please enter a valid email.');
                 } else {
-                    showToast('? Subscribed Successfully!');
+                    showToast('Subscribed Successfully!');
                     emailInput.value = '';
                 }
             }
