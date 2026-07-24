@@ -426,14 +426,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function showToast(message) {
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.textContent = message;
-        toastContainer.appendChild(toast);
+   function showToast(message) {
+
+    const container = document.getElementById("toast-container");
+
+    if (!container) return;
+
+    const toast = document.createElement("div");
+
+    toast.className = "toast";
+
+    toast.innerHTML = `
+        <i class="fa-solid fa-circle-check"></i>
+        <span>${message}</span>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+
+        toast.classList.add("hide");
+
         setTimeout(() => {
-            toast.classList.add('hide');
-            setTimeout(() => toast.remove(), 300);
-        }, 3000);
-    }
+            toast.remove();
+        }, 300);
+
+    }, 2500);
+
+}
 });
